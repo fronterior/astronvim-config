@@ -9,8 +9,12 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
-  -- { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.swift" },
   {
     import = "astrocommunity.colorscheme.citruszest-nvim",
   },
+  { import = "astrocommunity.colorscheme.bluloco-nvim" },
+  { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.colorscheme.cyberdream-nvim" },
 }

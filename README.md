@@ -1,5 +1,15 @@
 # AstroNvim Template
 
+## 수정사항
+
+### lua 파일 활성화
+
+파일 첫줄에 작성된 아래 코드를 주석 처리해야 작동
+
+```lua
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+```
+
 **NOTE:** This is for AstroNvim v4+
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
