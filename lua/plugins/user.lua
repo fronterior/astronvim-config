@@ -101,9 +101,20 @@ return {
   },
 
   {
-    'stevearc/aerial.nvim',
+    "stevearc/aerial.nvim",
     opts = {
       placement = "right",
-    }
-  }
+    },
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require "cmp"
+      opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        ["<C-i>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+        ["<C-Space>"] = nil,
+      })
+    end,
+  },
 }
