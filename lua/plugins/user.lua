@@ -168,4 +168,15 @@ return {
   --     }
   --   end,
   -- },
+  {
+    "sindrets/diffview.nvim",
+    config = function()
+      require("diffview").setup {
+        -- 여기에 Diffview 설정을 추가할 수 있습니다
+      }
+    end,
+  },
+  {
+    "Exafunction/codeium.vim",
+  },
 }
