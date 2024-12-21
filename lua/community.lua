@@ -17,4 +17,9 @@ return {
   { import = "astrocommunity.colorscheme.bluloco-nvim" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.colorscheme.cyberdream-nvim" },
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.indent.indent-rainbowline" },
+  { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  { import = "astrocommunity.scrolling.nvim-scrollbar" },
 }
