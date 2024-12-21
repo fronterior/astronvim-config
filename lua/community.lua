@@ -22,4 +22,5 @@ return {
   { import = "astrocommunity.indent.indent-rainbowline" },
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  { import = "astrocommunity.color.transparent-nvim" },
 }
