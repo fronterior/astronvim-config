@@ -170,13 +170,40 @@ return {
   -- },
   {
     "sindrets/diffview.nvim",
-    config = function()
-      require("diffview").setup {
-        -- 여기에 Diffview 설정을 추가할 수 있습니다
-      }
-    end,
+    config = function() require("diffview").setup {} end,
   },
   {
     "Exafunction/codeium.vim",
+  },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+    },
+    config = function()
+      -- https://github.com/mfussenegger/nvim-dap/discussions/659#discussioncomment-3904282
+      local dap = require "dap"
+
+      local debugger_location = vim.fn.stdpath "data" .. "/mason/packages/node-debug2-adapter"
+      dap.adapters.node = {
+        type = "executable",
+        command = "node",
+        args = { debugger_location .. "/out/src/nodeDebug.js" },
+      }
+
+      dap.configurations.typescript = {
+        {
+          name = "Launch Node",
+          type = "node",
+          request = "launch",
+          -- runtimeArgs = { "-r", "ts-node/register" },
+          -- runtimeExecutable = "node",
+          runtimeExecutable = "tsx",
+          args = { "--inspect", "${file}" },
+          skipFiles = { "node_modules/**" },
+          console = "integratedTerminal",
+        },
+      }
+    end,
   },
 }
