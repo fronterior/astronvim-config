@@ -168,13 +168,18 @@ return {
   --     }
   --   end,
   -- },
+
   {
     "sindrets/diffview.nvim",
     config = function() require("diffview").setup {} end,
   },
   {
     "Exafunction/codeium.vim",
+    config = function()
+      vim.keymap.set("i", "<C-k>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
+    end,
   },
+
   {
     "mfussenegger/nvim-dap",
     dependencies = {
