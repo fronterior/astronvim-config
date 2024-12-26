@@ -87,14 +87,20 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        position = "float", -- 여기서 "float"로 설정
+        position = "float",
         popup = {
           size = {
-            height = "95%", -- 높이 비율 (원하는 비율로 설정)
-            width = "20%", -- 너비 비율 (원하는 비율로 설정)
+            height = "95%",
+            width = "20%",
           },
-          position = "4%", -- 화면 중심에 배치
-          border = "rounded", -- 테두리 스타일
+          position = "4%",
+          border = "rounded",
+        },
+        mappings = {
+          ["s"] = false,
+          ["S"] = false,
+          ["v"] = "open_split",
+          ["h"] = "open_vsplit",
         },
       },
     },
