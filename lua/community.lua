@@ -26,4 +26,5 @@ return {
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.harpoon" },
 }
