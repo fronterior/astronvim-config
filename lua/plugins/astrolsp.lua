@@ -93,7 +93,8 @@ return {
             return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
         },
-        ["K"] = { vim.lsp.buf.hover, desc = "Show hover documentation" },
+        K = { vim.lsp.buf.hover, desc = "Show hover documentation" },
+        grr = { ":Telescope lsp_references<CR>", desc = "Find LSP References" },
       },
       -- i = {
       --   ["<C-a>"] = {
@@ -101,7 +102,7 @@ return {
       --   },
       -- },
     },
-   
+
     -- A custom `on_attach` function to be run after the default `on_attach` function
     -- takes two parameters `client` and `bufnr`  (`:h lspconfig-setup`)
     on_attach = function(client, bufnr)
