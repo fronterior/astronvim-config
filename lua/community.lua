@@ -27,4 +27,6 @@ return {
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.motion.before-nvim" },
+  { import = "astrocommunity.motion.mini-surround" },
 }
