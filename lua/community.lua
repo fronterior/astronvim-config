@@ -29,4 +29,7 @@ return {
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.before-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
 }
