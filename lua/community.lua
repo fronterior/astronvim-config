@@ -22,6 +22,7 @@ return {
   { import = "astrocommunity.indent.indent-rainbowline" },
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
@@ -32,4 +33,5 @@ return {
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
+  { import = "astrocommunity.completion.magazine-nvim" },
 }
