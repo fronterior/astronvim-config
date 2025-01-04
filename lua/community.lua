@@ -35,4 +35,7 @@ return {
   -- { import = "astrocommunity.completion.magazine-nvim" },
   { import = "astrocommunity.debugging.nvim-chainsaw" },
   { import = "astrocommunity.editing-support.vim-move" },
+  { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
+  { import = "astrocommunity.editing-support.mini-splitjoin" },
+  { import = "astrocommunity.editing-support.wildfire-nvim" },
 }
