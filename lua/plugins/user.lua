@@ -117,8 +117,8 @@ return {
         mappings = {
           ["s"] = false,
           ["S"] = false,
-          ["v"] = "open_split",
-          ["h"] = "open_vsplit",
+          ["h"] = "open_split",
+          ["v"] = "open_vsplit",
         },
       },
       event_handlers = {
