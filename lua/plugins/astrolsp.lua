@@ -94,6 +94,7 @@ return {
           end,
         },
         K = { vim.lsp.buf.hover, desc = "Show hover documentation" },
+        ["<Leader>W"] = { ":noautocmd w<CR>", desc = "Save without formatting" },
         grr = { ":Telescope lsp_references<CR>", desc = "Find LSP References" },
       },
       -- i = {
