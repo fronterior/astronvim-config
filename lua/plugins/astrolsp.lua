@@ -96,12 +96,36 @@ return {
         K = { vim.lsp.buf.hover, desc = "Show hover documentation" },
         ["<Leader>W"] = { ":noautocmd w<CR>", desc = "Save without formatting" },
         grr = { ":Telescope lsp_references<CR>", desc = "Find LSP References" },
+
+        -----
+        ["<leader>X"] = { desc = "Xcodebuild" },
+        ["<leader>Xa"] = { "<cmd>XcodebuildPicker<cr>", desc = "Show Xcodebuild Actions" },
+        ["<leader>Xf"] = { "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
+        ["<leader>Xb"] = { "<cmd>XcodebuildBuild<cr>", desc = "Build Project" },
+        ["<leader>XB"] = { "<cmd>XcodebuildBuildForTesting<cr>", desc = "Build For Testing" },
+        ["<leader>Xr"] = { "<cmd>XcodebuildBuildRun<cr>", desc = "Build & Run Project" },
+        ["<leader>Xt"] = { "<cmd>XcodebuildTest<cr>", desc = "Run Tests" },
+        ["<leader>XT"] = { "<cmd>XcodebuildTestClass<cr>", desc = "Run Current Test Class" },
+        ["<leader>X."] = { "<cmd>XcodebuildTestRepeat<cr>", desc = "Repeat Last Test Run" },
+        ["<leader>Xl"] = { "<cmd>XcodebuildToggleLogs<cr>", desc = "Toggle Xcodebuild Logs" },
+        ["<leader>Xc"] = { "<cmd>XcodebuildToggleCodeCoverage<cr>", desc = "Toggle Code Coverage" },
+        ["<leader>XC"] = { "<cmd>XcodebuildShowCodeCoverageReport<cr>", desc = "Show Code Coverage Report" },
+        ["<leader>Xe"] = { "<cmd>XcodebuildTestExplorerToggle<cr>", desc = "Toggle Test Explorer" },
+        ["<leader>Xs"] = { "<cmd>XcodebuildFailingSnapshots<cr>", desc = "Show Failing Snapshots" },
+        ["<leader>Xd"] = { "<cmd>XcodebuildSelectDevice<cr>", desc = "Select Device" },
+        ["<leader>Xp"] = { "<cmd>XcodebuildSelectTestPlan<cr>", desc = "Select Test Plan" },
+        ["<leader>Xq"] = { "<cmd>Telescope quickfix<cr>", desc = "Show QuickFix List" },
+        ["<leader>Xx"] = { "<cmd>XcodebuildQuickfixLine<cr>", desc = "Quickfix Line" },
+        ["<leader>XA"] = { "<cmd>XcodebuildCodeActions<cr>", desc = "Show Code Actions" },
       },
       -- i = {
       --   ["<C-a>"] = {
       --     function() require("cmp").mapping.complete() end,
       --   },
       -- },
+      v = {
+        ["<leader>Xt"] = { "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
+      },
     },
 
     -- A custom `on_attach` function to be run after the default `on_attach` function

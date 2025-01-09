@@ -191,16 +191,44 @@ return {
   },
 
   {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "wojciech-kulik/xcodebuild.nvim",
+    },
+    config = function()
+      local xcodebuild = require "xcodebuild.integrations.dap"
+      -- SAMPLE PATH, change it to your local codelldb path
+      local codelldbPath = os.getenv "HOME" .. "/tools/codelldb-aarch64-darwin/extension/adapter/codelldb"
+
+      xcodebuild.setup(codelldbPath)
+
+      vim.keymap.set("n", "<leader>dxd", xcodebuild.build_and_debug, { desc = "Build & Debug" })
+      vim.keymap.set("n", "<leader>dxr", xcodebuild.debug_without_build, { desc = "Debug Without Building" })
+      vim.keymap.set("n", "<leader>dxt", xcodebuild.debug_tests, { desc = "Debug Tests" })
+      vim.keymap.set("n", "<leader>dxT", xcodebuild.debug_class_tests, { desc = "Debug Class Tests" })
+      vim.keymap.set("n", "<leader>dxb", xcodebuild.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+      vim.keymap.set("n", "<leader>dxB", xcodebuild.toggle_message_breakpoint, { desc = "Toggle Message Breakpoint" })
+      vim.keymap.set("n", "<leader>dxx", xcodebuild.terminate_session, { desc = "Terminate Debugger" })
+    end,
+    mappings = {
+      ["<leader>d"] = { name = "Xcode Debug" },
+    },
+  },
+
+  {
     "vuki656/package-info.nvim",
     enabled = false,
   },
 
   {
-    "rcarriga/nvim-notify",
-    config = function()
-      require("notify").setup {
-        stages = "static",
-      }
-    end,
+    "wojciech-kulik/xcodebuild.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-tree.lua", -- optional
+      "stevearc/oil.nvim", -- optional
+      "nvim-treesitter/nvim-treesitter", -- optional
+    },
+    config = function() require("xcodebuild").setup {} end,
   },
 }
