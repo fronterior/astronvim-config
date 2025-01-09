@@ -1,5 +1,8 @@
 # AstroNvim Template
 
+- [AstroNvim Getting Started](https://docs.astronvim.com/) 문서의 Requirements 를 준비
+- ~/.config/nvim 폴더에 git clone
+
 ## 수정사항
 
 ### lua 파일 활성화
