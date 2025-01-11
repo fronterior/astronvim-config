@@ -5,22 +5,22 @@
 
 ---@type LazySpec
 return {
-  {
-    "ggandor/leap.nvim",
-    config = function()
-      local leap = require "leap"
-      leap.opts.safe_labels = {}
-      -- leap 모드 시작/종료 시 플래그 설정
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "LeapEnter",
-        callback = function() vim.g.leap_active = true end,
-      })
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "LeapLeave",
-        callback = function() vim.g.leap_active = false end,
-      })
-    end,
-  },
+  -- {
+  --   "ggandor/leap.nvim",
+  --   config = function()
+  --     local leap = require "leap"
+  --     leap.opts.safe_labels = {}
+  --     -- leap 모드 시작/종료 시 플래그 설정
+  --     vim.api.nvim_create_autocmd("User", {
+  --       pattern = "LeapEnter",
+  --       callback = function() vim.g.leap_active = true end,
+  --     })
+  --     vim.api.nvim_create_autocmd("User", {
+  --       pattern = "LeapLeave",
+  --       callback = function() vim.g.leap_active = false end,
+  --     })
+  --   end,
+  -- },
 
   -- == Examples of Adding Plugins ==
 
@@ -126,7 +126,7 @@ return {
           event = "before_render",
           handler = function(state)
             -- Leap 모드가 활성화되어 있을 때는 모든 키매핑을 비활성화
-            if vim.g.leap_active then state.window.mappings = {} end
+            -- if vim.g.leap_active then state.window.mappings = {} end
           end,
         },
       },
