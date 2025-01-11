@@ -25,7 +25,7 @@ return {
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
-  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.before-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
