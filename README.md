@@ -10,6 +10,8 @@
 
 - [AstroNvim Community Repository Pages](https://astronvim.github.io/astrocommunity) 에 있는 플러그인 설치시 사용
 - 플러그인끼리 충돌하지 않게 설정을 관리해주고 있어서 편리
+  - 대부분의 플러그인 키 바인딩이 변경되어있으니 위 페이지에서 확인 후 사용
+  - 위 페이지에 키 바인딩이 정의되어있지 않으면 플러그인 github의 기본 키 바인딩을 사용
 - 재설정이 필요하면 `lua/plugins/user.lua` 파일에서 정의 가능
 
 ### lua/plugins/user.lua
