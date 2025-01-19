@@ -39,4 +39,5 @@ return {
   { import = "astrocommunity.editing-support.mini-splitjoin" },
   { import = "astrocommunity.editing-support.wildfire-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
 }

@@ -26,6 +26,7 @@
   "deno-nvim": { "branch": "master", "commit": "4bc9b5db13e8152b01aed51ce0451cdd38ca6743" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "dressing.nvim": { "branch": "master", "commit": "3a45525bb182730fe462325c99395529308f431e" },
+  "dropbar.nvim": { "branch": "master", "commit": "40ef4c492edc08090d31d12fb9b7eb2315463a7e" },
   "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
   "fluoromachine.nvim": { "branch": "main", "commit": "d638ea221b4c6636978f49c1987d10ff2733c23d" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
