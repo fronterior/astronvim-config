@@ -115,9 +115,9 @@ return {
           border = "rounded",
         },
         mappings = {
-          ["s"] = false,
-          ["S"] = false,
-          ["h"] = "open_split",
+          -- ["s"] = false,
+          -- ["S"] = false,
+          ["V"] = "open_split",
           ["v"] = "open_vsplit",
         },
       },
