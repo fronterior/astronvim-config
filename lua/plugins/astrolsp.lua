@@ -97,7 +97,7 @@ return {
         ["<Leader>W"] = { ":noautocmd w<CR>", desc = "Save without formatting" },
         grr = { ":Telescope lsp_references<CR>", desc = "Find LSP References" },
 
-        -----
+        -- Xcodebuild
         ["<leader>X"] = { desc = "Xcodebuild" },
         ["<leader>Xa"] = { "<cmd>XcodebuildPicker<cr>", desc = "Show Xcodebuild Actions" },
         ["<leader>Xf"] = { "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
@@ -117,6 +117,11 @@ return {
         ["<leader>Xq"] = { "<cmd>Telescope quickfix<cr>", desc = "Show QuickFix List" },
         ["<leader>Xx"] = { "<cmd>XcodebuildQuickfixLine<cr>", desc = "Quickfix Line" },
         ["<leader>XA"] = { "<cmd>XcodebuildCodeActions<cr>", desc = "Show Code Actions" },
+
+        -- CodeCompanion
+        ["<leader>P"] = { desc = "CodeCompanion" },
+        ["<leader>Pa"] = { "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions" },
+        ["<leader>Pt"] = { "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Code Companion Chat" },
       },
       -- i = {
       --   ["<C-a>"] = {
@@ -124,7 +129,13 @@ return {
       --   },
       -- },
       v = {
+        -- Xcodebuild
         ["<leader>Xt"] = { "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
+
+        -- CodeCompanion
+        ["<leader>P"] = { desc = "CodeCompanion" },
+        ["<leader>Pa"] = { "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions" },
+        ["<leader>Pc"] = { "<cmd>CodeCompanionChat Add<cr>", desc = "Add to Code Companion Chat" },
       },
     },
 
