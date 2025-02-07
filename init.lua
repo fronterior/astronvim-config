@@ -17,3 +17,11 @@ end
 
 require "lazy_setup"
 require "polish"
+
+-- yank to clipboard for macOS
+-- https://superuser.com/a/1741373
+if vim.fn.has "unnamedplus" == 1 then
+  vim.opt.clipboard = "unnamedplus"
+else
+  vim.opt.clipboard = "unnamed"
+end
