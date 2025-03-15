@@ -23,6 +23,7 @@
   "codecompanion.nvim": { "branch": "main", "commit": "a55c561f2bfb10725e87bb7d55a70a8616dd7e37" },
   "codeium.nvim": { "branch": "main", "commit": "ebed4f7cc8a18184d8332d421ca10bed5f7d59a1" },
   "codeium.vim": { "branch": "main", "commit": "d152e6cd3d814a44f36447bb0d21d51f6787fe9c" },
+  "cutlass.nvim": { "branch": "main", "commit": "1ac7e4b53d79410be52a9e464d44c60556282b3e" },
   "cyberdream.nvim": { "branch": "main", "commit": "77c27cb822b638d7b332cfff6c6fb09473a7d180" },
   "deno-nvim": { "branch": "master", "commit": "4bc9b5db13e8152b01aed51ce0451cdd38ca6743" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
