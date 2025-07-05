@@ -1,5 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
@@ -24,9 +22,9 @@ return {
   { import = "astrocommunity.colorscheme.cyberdream-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.indent.indent-rainbowline" },
+  -- { import = "astrocommunity.indent.indent-rainbowline" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
-  { import = "astrocommunity.completion.codeium-nvim" },
+  -- { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
@@ -48,4 +46,5 @@ return {
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
   -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
+  { import = "astrocommunity.indent.indent-blankline-nvim" },
 }

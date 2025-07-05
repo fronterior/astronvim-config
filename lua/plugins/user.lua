@@ -1,26 +1,9 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
+-- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
 -- Here are some examples:
 
 ---@type LazySpec
 return {
-  -- {
-  --   "ggandor/leap.nvim",
-  --   config = function()
-  --     local leap = require "leap"
-  --     leap.opts.safe_labels = {}
-  --     -- leap 모드 시작/종료 시 플래그 설정
-  --     vim.api.nvim_create_autocmd("User", {
-  --       pattern = "LeapEnter",
-  --       callback = function() vim.g.leap_active = true end,
-  --     })
-  --     vim.api.nvim_create_autocmd("User", {
-  --       pattern = "LeapLeave",
-  --       callback = function() vim.g.leap_active = false end,
-  --     })
-  --   end,
-  -- },
 
   -- == Examples of Adding Plugins ==
 
@@ -33,26 +16,28 @@ return {
 
   -- == Examples of Overriding Plugins ==
 
-  -- customize alpha options
+  -- customize dashboard options
   {
-    "goolord/alpha-nvim",
-    opts = function(_, opts)
-      -- customize the dashboard header
-      opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
-      }
-      return opts
-    end,
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = table.concat({
+            " █████  ███████ ████████ ██████   ██████ ",
+            "██   ██ ██         ██    ██   ██ ██    ██",
+            "███████ ███████    ██    ██████  ██    ██",
+            "██   ██      ██    ██    ██   ██ ██    ██",
+            "██   ██ ███████    ██    ██   ██  ██████ ",
+            "",
+            "███    ██ ██    ██ ██ ███    ███",
+            "████   ██ ██    ██ ██ ████  ████",
+            "██ ██  ██ ██    ██ ██ ██ ████ ██",
+            "██  ██ ██  ██  ██  ██ ██  ██  ██",
+            "██   ████   ████   ██ ██      ██",
+          }, "\n"),
+        },
+      },
+    },
   },
 
   -- You can disable default plugins as follows:
@@ -150,25 +135,25 @@ return {
     },
   },
 
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      local cmp = require "cmp"
-      opts.mapping = vim.tbl_extend("force", opts.mapping, {
-        ["<C-i>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-        ["<C-Space>"] = nil,
-      })
-    end,
-  },
-
-  {
-    "Exafunction/codeium.vim",
-    config = function()
-      vim.g.codeium_disable_bindings = true
-
-      vim.keymap.set("i", "<C-k>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
-    end,
-  },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   opts = function(_, opts)
+  --     local cmp = require "cmp"
+  --     opts.mapping = vim.tbl_extend("force", opts.mapping, {
+  --       ["<C-i>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+  --       ["<C-Space>"] = nil,
+  --     })
+  --   end,
+  -- },
+  --
+  -- {
+  --   "Exafunction/codeium.vim",
+  --   config = function()
+  --     vim.g.codeium_disable_bindings = true
+  --
+  --     vim.keymap.set("i", "<C-k>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
+  --   end,
+  -- },
 
   -- {
   --   {

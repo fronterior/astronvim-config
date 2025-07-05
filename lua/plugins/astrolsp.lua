@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
@@ -55,7 +55,7 @@ return {
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
     },
-    -- Conufigure buffer local auto commands to add when attaching a language server
+    -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
       -- first key is the `augroup` to add the auto commands to (:h augroup)
       lsp_codelens_refresh = {
@@ -93,52 +93,8 @@ return {
             return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
         },
-        K = { vim.lsp.buf.hover, desc = "Show hover documentation" },
-        ["<Leader>W"] = { ":noautocmd w<CR>", desc = "Save without formatting" },
-        grr = { ":Telescope lsp_references<CR>", desc = "Find LSP References" },
-
-        -- Xcodebuild
-        ["<leader>X"] = { desc = "Xcodebuild" },
-        ["<leader>Xa"] = { "<cmd>XcodebuildPicker<cr>", desc = "Show Xcodebuild Actions" },
-        ["<leader>Xf"] = { "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
-        ["<leader>Xb"] = { "<cmd>XcodebuildBuild<cr>", desc = "Build Project" },
-        ["<leader>XB"] = { "<cmd>XcodebuildBuildForTesting<cr>", desc = "Build For Testing" },
-        ["<leader>Xr"] = { "<cmd>XcodebuildBuildRun<cr>", desc = "Build & Run Project" },
-        ["<leader>Xt"] = { "<cmd>XcodebuildTest<cr>", desc = "Run Tests" },
-        ["<leader>XT"] = { "<cmd>XcodebuildTestClass<cr>", desc = "Run Current Test Class" },
-        ["<leader>X."] = { "<cmd>XcodebuildTestRepeat<cr>", desc = "Repeat Last Test Run" },
-        ["<leader>Xl"] = { "<cmd>XcodebuildToggleLogs<cr>", desc = "Toggle Xcodebuild Logs" },
-        ["<leader>Xc"] = { "<cmd>XcodebuildToggleCodeCoverage<cr>", desc = "Toggle Code Coverage" },
-        ["<leader>XC"] = { "<cmd>XcodebuildShowCodeCoverageReport<cr>", desc = "Show Code Coverage Report" },
-        ["<leader>Xe"] = { "<cmd>XcodebuildTestExplorerToggle<cr>", desc = "Toggle Test Explorer" },
-        ["<leader>Xs"] = { "<cmd>XcodebuildFailingSnapshots<cr>", desc = "Show Failing Snapshots" },
-        ["<leader>Xd"] = { "<cmd>XcodebuildSelectDevice<cr>", desc = "Select Device" },
-        ["<leader>Xp"] = { "<cmd>XcodebuildSelectTestPlan<cr>", desc = "Select Test Plan" },
-        ["<leader>Xq"] = { "<cmd>Telescope quickfix<cr>", desc = "Show QuickFix List" },
-        ["<leader>Xx"] = { "<cmd>XcodebuildQuickfixLine<cr>", desc = "Quickfix Line" },
-        ["<leader>XA"] = { "<cmd>XcodebuildCodeActions<cr>", desc = "Show Code Actions" },
-
-        -- CodeCompanion
-        ["<leader>P"] = { desc = "CodeCompanion" },
-        ["<leader>Pa"] = { "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions" },
-        ["<leader>Pt"] = { "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Code Companion Chat" },
-      },
-      -- i = {
-      --   ["<C-a>"] = {
-      --     function() require("cmp").mapping.complete() end,
-      --   },
-      -- },
-      v = {
-        -- Xcodebuild
-        ["<leader>Xt"] = { "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
-
-        -- CodeCompanion
-        ["<leader>P"] = { desc = "CodeCompanion" },
-        ["<leader>Pa"] = { "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions" },
-        ["<leader>Pc"] = { "<cmd>CodeCompanionChat Add<cr>", desc = "Add to Code Companion Chat" },
       },
     },
-
     -- A custom `on_attach` function to be run after the default `on_attach` function
     -- takes two parameters `client` and `bufnr`  (`:h lspconfig-setup`)
     on_attach = function(client, bufnr)
