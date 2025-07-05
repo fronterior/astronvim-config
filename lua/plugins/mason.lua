@@ -26,14 +26,15 @@ return {
       },
     },
   },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
-    opts = {
-      ensure_installed = {
-        "python",
-        -- add more arguments for adding more debuggers
-      },
-    },
-  },
+  { "jay-babu/mason-nvim-dap.nvim", enabled = false },
+  -- {
+  --   "jay-babu/mason-nvim-dap.nvim",
+  --   -- overrides `require("mason-nvim-dap").setup(...)`
+  --   opts = {
+  --     ensure_installed = {
+  --       "python",
+  --       -- add more arguments for adding more debuggers
+  --     },
+  --   },
+  -- },
 }

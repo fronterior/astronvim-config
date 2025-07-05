@@ -9,8 +9,13 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
-  { import = "astrocommunity.pack.typescript-all-in-one" },
-  { import = "astrocommunity.pack.swift" },
+  {
+    import = "astrocommunity.pack.typescript-all-in-one",
+    opts = {
+      dap = false,
+    },
+  },
+  -- { import = "astrocommunity.pack.swift" },
   {
     import = "astrocommunity.colorscheme.citruszest-nvim",
   },
@@ -42,4 +47,5 @@ return {
   { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
+  -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
 }
