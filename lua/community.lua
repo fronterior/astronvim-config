@@ -25,6 +25,7 @@ return {
   -- { import = "astrocommunity.indent.indent-rainbowline" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
   -- { import = "astrocommunity.completion.codeium-nvim" },
+  { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
@@ -47,4 +48,5 @@ return {
   { import = "astrocommunity.editing-support.cutlass-nvim" },
   -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
+  { import = "astrocommunity.docker.lazydocker" },
 }
