@@ -275,7 +275,6 @@ return {
                   type = "pwa-node",
                   request = "attach",
                   name = "Attach",
-                  -- processId = require("dap.utils").pick_process,
                   port = 9229,
                   cwd = "${workspaceFolder}",
                   skipFiles = { "<node_internals>/**" },
@@ -419,11 +418,69 @@ return {
       },
     },
     config = function()
+      local dropbar = require "dropbar"
       local dropbar_api = require "dropbar.api"
+      local sources = require "dropbar.sources"
+
+      dropbar.setup {
+        bar = {
+          sources = {
+            sources.path,
+          },
+        },
+      }
 
       vim.keymap.set("n", "<Leader>;", dropbar_api.pick, { desc = "Dropbar: pick symbol" })
+      vim.keymap.set("n", '<Leader>"', function()
+        local bar = require("dropbar.utils.bar").get_current()
+        if bar and bar.components and #bar.components > 0 then bar:pick(#bar.components) end
+      end, { desc = "Dropbar: open current context" })
+
       vim.keymap.set("n", "[;", dropbar_api.goto_context_start, { desc = "Dropbar: go to context start" })
       vim.keymap.set("n", "];", dropbar_api.select_next_context, { desc = "Dropbar: select next context" })
     end,
+  },
+
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter",
+        opts = function(_, opts)
+          opts.ensure_installed = opts.ensure_installed or {}
+          table.insert(opts.ensure_installed, "http")
+        end,
+      },
+    },
+    config = function() require("rest-nvim").setup {} end,
+  },
+
+  {
+    "Exafunction/codeium.nvim",
+    cmd = "Codeium",
+    event = "InsertEnter",
+    build = ":Codeium Auth",
+    opts = {
+      enable_cmp_source = true,
+      virtual_text = {
+        enabled = true,
+        filetypes = {},
+        default_filetype_enabled = true,
+        manual = false,
+        idle_delay = 75,
+        virtual_text_priority = 65535,
+        map_keys = true,
+        accept_fallback = "\t",
+        key_bindings = {
+          accept = "<C-k>",
+          accept_word = false,
+          accept_line = false,
+          clear = false,
+          next = "<M-]>",
+          prev = "<M-[>",
+        },
+      },
+    },
+    config = function(_, opts) require("codeium").setup(opts) end,
   },
 }
