@@ -111,7 +111,7 @@ return {
       opts.window.mappings["v"] = "open_vsplit"
       opts.window.mappings["<F1>"] = "prev_source"
       opts.window.mappings["<F2>"] = "next_source"
-      opts.window.mappings["\\"] = function() end
+      opts.window.mappings["\\"] = "set_root"
       opts.window.mappings["|"] = function() end
 
       -- 기존 event_handlers 유지
@@ -144,89 +144,6 @@ return {
   --       ["<C-Space>"] = nil,
   --     })
   --   end,
-  -- },
-  --
-  -- {
-  --   "Exafunction/codeium.vim",
-  --   config = function()
-  --     vim.g.codeium_disable_bindings = true
-  --
-  --     vim.keymap.set("i", "<C-k>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
-  --   end,
-  -- },
-
-  -- {
-  --   {
-  --     "mfussenegger/nvim-dap",
-  --     enabled = true,
-  --     event = "FileType", -- community 보다 로딩 늦추기
-  --     dependencies = {
-  --       "rcarriga/nvim-dap-ui",
-  --     },
-  --     config = function()
-  --       local dap = require "dap"
-  --
-  --       dap.adapters["pwa-node"] = {
-  --         type = "server",
-  --         host = "localhost",
-  --         port = "${port}",
-  --         executable = {
-  --           command = "node",
-  --           -- command = "js-debug-adapter",
-  --           args = {
-  --             vim.fn.stdpath "data" .. "/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js",
-  --             "${port}",
-  --           },
-  --         },
-  --       }
-  --
-  --       dap.adapters["pwa-chrome"] = {
-  --         type = "server",
-  --         host = "localhost",
-  --         port = "${port}",
-  --         executable = {
-  --           command = "node",
-  --           args = {
-  --             vim.fn.stdpath "data" .. "/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js",
-  --             "${port}",
-  --           },
-  --         },
-  --       }
-  --
-  --       for _, language in ipairs { "typescript", "javascript" } do
-  --         dap.configurations[language] = {
-  --           {
-  --             type = "pwa-node",
-  --             request = "launch",
-  --             name = "Launch file",
-  --             program = "${file}",
-  --             cwd = "${workspaceFolder}",
-  --           },
-  --           {
-  --             type = "pwa-node",
-  --             request = "attach",
-  --             name = "Attach",
-  --             processId = require("dap.utils").pick_process,
-  --             cwd = "${workspaceFolder}",
-  --           },
-  --           {
-  --             type = "pwa-node",
-  --             request = "launch",
-  --             name = "Debug Jest Tests",
-  --             runtimeExecutable = "node",
-  --             runtimeArgs = {
-  --               "./node_modules/jest/bin/jest.js",
-  --               "--runInBand",
-  --             },
-  --             rootPath = "${workspaceFolder}",
-  --             cwd = "${workspaceFolder}",
-  --             console = "integratedTerminal",
-  --             internalConsoleOptions = "neverOpen",
-  --           },
-  --         }
-  --       end
-  --     end,
-  --   },
   -- },
 
   {
@@ -476,8 +393,6 @@ return {
           accept_word = false,
           accept_line = false,
           clear = false,
-          next = "<M-]>",
-          prev = "<M-[>",
         },
       },
     },
