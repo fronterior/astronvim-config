@@ -18,6 +18,17 @@ return {
           sources.path,
         },
       },
+      menu = {
+        entry = {
+          padding = {
+            left = 1,
+            right = 1,
+          },
+        },
+        win_configs = {
+          border = "rounded",
+        },
+      },
     }
 
     vim.keymap.set("n", "<Leader>;", dropbar_api.pick, { desc = "Dropbar: pick symbol" })
