@@ -6,20 +6,16 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  -- import/override with your plugins folder
   {
     import = "astrocommunity.pack.typescript-all-in-one",
     opts = {
       dap = false,
     },
   },
-  -- { import = "astrocommunity.pack.swift" },
+  { import = "astrocommunity.completion.avante-nvim" },
   {
     import = "astrocommunity.colorscheme.citruszest-nvim",
   },
-  { import = "astrocommunity.colorscheme.bluloco-nvim" },
-  { import = "astrocommunity.completion.avante-nvim" },
-  { import = "astrocommunity.colorscheme.cyberdream-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   -- { import = "astrocommunity.indent.indent-rainbowline" },
@@ -28,7 +24,6 @@ return {
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
-  { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.before-nvim" },
@@ -49,4 +44,22 @@ return {
   -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.docker.lazydocker" },
+  { import = "astrocommunity.editing-support.bigfile-nvim" },
+  { import = "astrocommunity.editing-support.treesj" },
+  { import = "astrocommunity.fuzzy-finder.namu-nvim" },
+  { import = "astrocommunity.editing-support.codecompanion-nvim" },
+  { import = "astrocommunity.test.neotest" },
+
+  -- color theme
+  { import = "astrocommunity.color.huez-nvim" },
+  { import = "astrocommunity.colorscheme.aurora" },
+  { import = "astrocommunity.colorscheme.bamboo-nvim" },
+  { import = "astrocommunity.colorscheme.bluloco-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.cyberdream-nvim" },
+  { import = "astrocommunity.colorscheme.dracula-nvim" },
+  { import = "astrocommunity.colorscheme.everforest" },
+  { import = "astrocommunity.colorscheme.eldritch-nvim" },
+  { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
+  { import = "astrocommunity.colorscheme.github-nvim-theme" },
 }
