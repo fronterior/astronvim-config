@@ -267,29 +267,29 @@ return {
     end,
   },
 
-  {
-    "olimorris/codecompanion.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    opts = {
-      strategies = {
-        -- Change the default chat adapter
-        chat = {
-          adapter = "anthropic",
-        },
-        inline = {
-          adapter = "anthropic",
-        },
-      },
-      opts = {
-        -- Set debug logging
-        log_level = "DEBUG",
-      },
-    },
-    config = true,
-  },
+  -- {
+  --   "olimorris/codecompanion.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-treesitter/nvim-treesitter",
+  --   },
+  --   opts = {
+  --     strategies = {
+  --       -- Change the default chat adapter
+  --       chat = {
+  --         adapter = "anthropic",
+  --       },
+  --       inline = {
+  --         adapter = "anthropic",
+  --       },
+  --     },
+  --     opts = {
+  --       -- Set debug logging
+  --       log_level = "DEBUG",
+  --     },
+  --   },
+  --   config = true,
+  -- },
 
   {
     "rcarriga/nvim-notify",
@@ -397,5 +397,14 @@ return {
       },
     },
     config = function(_, opts) require("codeium").setup(opts) end,
+  },
+
+  {
+    "bassamsdata/namu.nvim",
+    opts = {
+      display = {
+        format = "tree_guides",
+      },
+    },
   },
 }

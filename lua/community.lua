@@ -51,7 +51,6 @@ return {
   { import = "astrocommunity.test.neotest" },
 
   -- color theme
-  { import = "astrocommunity.color.huez-nvim" },
   { import = "astrocommunity.colorscheme.aurora" },
   { import = "astrocommunity.colorscheme.bamboo-nvim" },
   { import = "astrocommunity.colorscheme.bluloco-nvim" },
