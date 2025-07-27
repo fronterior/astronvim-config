@@ -8,9 +8,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   {
     import = "astrocommunity.pack.typescript-all-in-one",
-    opts = {
-      dap = false,
-    },
   },
   { import = "astrocommunity.completion.avante-nvim" },
   {
@@ -18,9 +15,7 @@ return {
   },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
-  -- { import = "astrocommunity.indent.indent-rainbowline" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
-  -- { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
@@ -31,7 +26,6 @@ return {
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
-  -- { import = "astrocommunity.completion.magazine-nvim" },
   { import = "astrocommunity.debugging.nvim-chainsaw" },
   { import = "astrocommunity.editing-support.vim-move" },
   { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
@@ -41,7 +35,6 @@ return {
   { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
-  -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.docker.lazydocker" },
   { import = "astrocommunity.editing-support.bigfile-nvim" },
